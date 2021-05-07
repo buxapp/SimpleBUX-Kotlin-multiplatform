@@ -4,7 +4,6 @@ plugins {
     kotlin("multiplatform")
     id("kotlinx-serialization")
     id("com.android.library")
-    id("kotlin-android-extensions")
 }
 
 group = "com.getbux.simplebux"

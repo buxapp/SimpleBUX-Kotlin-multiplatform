@@ -3,7 +3,10 @@ package com.getbux.simplebux.androidApp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,11 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        viewModel.products.observe(this) {
-            findViewById<TextView>(R.id.text_view).text = it.first().displayName
+        setContent {
+            MainLayout()
         }
+    }
 
+    @Composable
+    fun MainLayout() {
+        Text("Hello world")
     }
 }
