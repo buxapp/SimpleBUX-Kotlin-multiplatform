@@ -18,7 +18,7 @@ import kotlinx.serialization.json.Json
 data class Money(
     val currency: String,
     val decimals: Int,
-    private var amount: Double
+    var amount: Double
 )
 
 @Serializable
